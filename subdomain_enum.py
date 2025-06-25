@@ -26,7 +26,7 @@ lock = threading.Lock()
 def check_subdomain(subdomain):
     url = f"http://{subdomain}.{domain}"
     try:
-        requests.get(url, timeout=3)
+        requests.get(url, timeout=5)
     except requests.ConnectionError:
         pass
     else:
